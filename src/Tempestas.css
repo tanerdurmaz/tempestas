@@ -1,0 +1,44 @@
+
+.container {
+    font-family: Roboto;
+    padding: 30vh;
+    width: 30%;
+    margin: auto;
+}
+
+
+.degree{
+    float: left;
+    width: 50%;
+    text-align: center;
+    font-size: 300%;
+    line-height: 10vh;
+}
+.icon{
+    float: right;
+    width: 50%;
+    text-align: center;
+    line-height: 20vh;
+vertical-align: middle;
+
+}
+.description{
+    float: left;
+    width: 50%;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 140%;
+}
+.city{
+    float: left;
+    width: 50%;
+    margin: auto;
+    font-size: 140%;
+    line-height: 10vh;
+        text-align: center;
+}
+.button{
+    text-align: center;
+    line-height: 10vh;
+    color: white;
+}
