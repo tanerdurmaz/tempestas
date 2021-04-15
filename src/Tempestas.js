@@ -27,12 +27,10 @@ class Tempestas extends React.Component {
             fahrenheit: 0,
             isMetric: false
         };
-        this.success = this.success.bind(this);
-        this.fetchWeather = this.fetchWeather.bind(this);
-        this.handleClick = this.handleClick.bind(this);
     }
 
-    success(position) {
+
+    success = (position) => {
         const latitude = position.coords.latitude;
         const longitude = position.coords.longitude;
         console.log("success " + latitude);
@@ -44,11 +42,12 @@ class Tempestas extends React.Component {
         console.log("state lon" + this.state.longitude)
         this.fetchWeather();
     }
-    error() {
-        console.log("error ");
+
+    error = () => {
+        console.log("error from navigator.geolocation ");
     }
 
-    fetchWeather() {
+    fetchWeather = () => {
         axios.get(`http://api.openweathermap.org/data/2.5/weather?lat=${this.state.latitude}&lon=${this.state.longitude}&APPID=ddec653e83e40ed4e33db40864945140`)
             .then(res => {
                 this.setState({
@@ -68,20 +67,13 @@ class Tempestas extends React.Component {
             })
     }
 
-
-    componentDidMount() {
-        
+    componentDidMount = () => {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(this.success, this.error);
         }
-
     }
 
-    handleClick(e) {
-        e.preventDefault();
-        console.log('The link was clicked.');
-        this.setState({ isMetric: !this.state.isMetric });
-    }
+    handleClick = () => this.setState({ isMetric: !this.state.isMetric });
 
     render() {
         return (
