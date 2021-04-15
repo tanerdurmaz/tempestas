@@ -5,7 +5,7 @@
 
 -`npm start` to start the local server (this project uses create-react-app)
 
-# api
+# api used
 
 [openWeather api](https://openweathermap.org/api)
 
